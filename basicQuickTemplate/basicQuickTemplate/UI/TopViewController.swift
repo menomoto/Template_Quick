@@ -5,10 +5,10 @@ class TopViewController: UIViewController {
     
     
     // MARK: - Properties
-    var labelText: String
+    private var labelText: String
     
     // MARK: - View Elements
-    let label: UILabel
+    private let label: UILabel
     
     // MARK: - Initializers
     init(
