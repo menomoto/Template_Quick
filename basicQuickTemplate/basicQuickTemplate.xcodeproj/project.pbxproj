@@ -10,7 +10,6 @@
 		BA0860F91DB8E7C500E329B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0860E81DB8E7C500E329B0 /* AppDelegate.swift */; };
 		BA0860FA1DB8E7C500E329B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0860E91DB8E7C500E329B0 /* Assets.xcassets */; };
 		BA0860FB1DB8E7C500E329B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0860EA1DB8E7C500E329B0 /* LaunchScreen.storyboard */; };
-		BA0860FC1DB8E7C500E329B0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA0860EC1DB8E7C500E329B0 /* Info.plist */; };
 		BA0860FD1DB8E7C500E329B0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0860ED1DB8E7C500E329B0 /* main.swift */; };
 		BA0860FE1DB8E7C500E329B0 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0860F11DB8E7C500E329B0 /* TopViewController.swift */; };
 		BA0860FF1DB8E7C500E329B0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA0860F41DB8E7C500E329B0 /* Info.plist */; };
@@ -245,16 +244,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = menomoto;
 				TargetAttributes = {
 					BA67014E1DA7EDE100938DEB = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					BA6701621DA7EDE100938DEB = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = BA67014E1DA7EDE100938DEB;
 					};
@@ -287,7 +287,6 @@
 				BA0860FF1DB8E7C500E329B0 /* Info.plist in Resources */,
 				BA0860FA1DB8E7C500E329B0 /* Assets.xcassets in Resources */,
 				BA0860FB1DB8E7C500E329B0 /* LaunchScreen.storyboard in Resources */,
-				BA0860FC1DB8E7C500E329B0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +375,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -425,6 +425,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -461,7 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.menomoto.noStoryBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -477,7 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.menomoto.noStoryBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -497,7 +498,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/basicQuickTemplate.app/basicQuickTemplate";
 			};
 			name = Debug;
@@ -517,7 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.menomoto.basicQuickTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/basicQuickTemplate.app/basicQuickTemplate";
 			};
 			name = Release;

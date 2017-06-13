@@ -26,10 +26,10 @@ class TopViewControllerTests: QuickSpec {
     }
 }
 
-private func isContainUILabelWithText(view: UIView, text: String) -> Bool {
+private func isContainUILabelWithText(_ view: UIView, text: String) -> Bool {
 
     for subview in view.subviews {
-        if let label = subview as? UILabel where label.text == text {
+        if let label = subview as? UILabel, label.text == text {
             return true
         }
         if isContainUILabelWithText(subview, text: text) {

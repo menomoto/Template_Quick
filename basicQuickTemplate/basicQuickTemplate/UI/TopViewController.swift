@@ -1,3 +1,4 @@
+
 import UIKit
 import PureLayout
 
@@ -5,10 +6,10 @@ class TopViewController: UIViewController {
     
     
     // MARK: - Properties
-    private var labelText: String
+    fileprivate var labelText: String
     
     // MARK: - View Elements
-    private let label: UILabel
+    fileprivate let label: UILabel
     
     // MARK: - Initializers
     init(
@@ -17,7 +18,7 @@ class TopViewController: UIViewController {
     {
         self.labelText = labelText
         
-        label = UILabel.newAutoLayoutView()
+        label = UILabel.newAutoLayout()
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -29,7 +30,7 @@ class TopViewController: UIViewController {
     // MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         
         addSubviews()
         addConstraints()
@@ -38,17 +39,17 @@ class TopViewController: UIViewController {
     }
     
     // MARK: - View Setup    
-    private func addSubviews() {
+    fileprivate func addSubviews() {
         view.addSubview(label)
     }
     
-    private func addConstraints() {
-        label.autoPinToTopLayoutGuideOfViewController(self, withInset: 10.0)
-        label.autoPinEdgeToSuperviewEdge(.Left, withInset: 10.0)
-        label.autoPinEdgeToSuperviewEdge(.Right, withInset: 10.0)
+    fileprivate func addConstraints() {
+        label.autoPin(toTopLayoutGuideOf: self, withInset: 10.0)
+        label.autoPinEdge(toSuperviewEdge: .left, withInset: 10.0)
+        label.autoPinEdge(toSuperviewEdge: .right, withInset: 10.0)
     }
     
-    private func configureSubviews() {
+    fileprivate func configureSubviews() {
         label.text = labelText
     }
     

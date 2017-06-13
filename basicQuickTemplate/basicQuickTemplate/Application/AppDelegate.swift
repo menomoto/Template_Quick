@@ -6,11 +6,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(
-        application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
         ) -> Bool
     {
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
      
         let viewController = TopViewController(labelText: "Pure Layout Sample 01")
         window?.rootViewController = viewController
