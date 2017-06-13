@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         window = UIWindow(frame: UIScreen.main.bounds)
      
-        let viewController = TopViewController(labelText: "Pure Layout Sample 01")
+        let viewController = TopViewController(labelText: "TableView template")
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         

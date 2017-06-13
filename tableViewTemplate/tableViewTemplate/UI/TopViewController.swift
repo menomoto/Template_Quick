@@ -86,16 +86,32 @@ extension TopViewController: UITableViewDelegate {
 
 extension TopViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 2
+        default:
+            return 0
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = TextCell()
-        cell.textLabel?.text = String(indexPath.row)
+        
+        switch indexPath.section {
+        case 0:
+            cell.textLabel?.text = "tableView Header Title"
+        case 1:
+            cell.textLabel?.text = "body text " + String(indexPath.row)
+        default:
+            return cell
+        }
         return cell
     }
 }

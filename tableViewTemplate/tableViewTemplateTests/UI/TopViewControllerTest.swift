@@ -12,8 +12,13 @@ import XCTest
 
 class TopViewControllerTest: XCTestCase {
     
+    var topViewController: TopViewController!
+    
     override func setUp() {
         super.setUp()
+        
+        topViewController = TopViewController(labelText: "TableView template")
+        topViewController.viewDidLoad()
     }
     
     override func tearDown() {
@@ -21,30 +26,34 @@ class TopViewControllerTest: XCTestCase {
     }
     
     func test_topViewController() {
-        let topViewController = TopViewController(labelText: "UILabel text matcher")
-        
-        
-        let expectedText = "UILabel text matcher"
+        let expectedText = "TableView template"
         XCTAssertTrue(isContainUILabelWithText(topViewController.view, text: expectedText))
     }
     
-    func test_tableViewDataSource() {
-        let topViewController = TopViewController(labelText: "UILabel text matcher")
-
-        
+    func test_tableViewNotNil() {
         XCTAssertNotNil(topViewController.tableView)
-        XCTAssertEqual(topViewController.tableView.numberOfSections, 1)
-        
-        topViewController.viewDidLoad()
-        XCTAssertEqual(topViewController.tableView.numberOfRows(inSection: 0), 2)
     }
     
-    func test_deleteButton() {
-        let topViewController = TopViewController(labelText: "UILabel text matcher")
-
-        XCTAssertNotNil(topViewController.deleteButton)
+    func test_tableViewNumberOfSections() {
+        XCTAssertEqual(topViewController.tableView.numberOfSections, 2)
+    }
+    
+    func test_tableViewSection0NumberOfRows() {
+        XCTAssertEqual(topViewController.tableView.numberOfRows(inSection: 0), 1)
+    }
         
-        topViewController.viewDidLoad()
+    func test_tableViewHeaderTitle() {
+        topViewController.tableView.reloadData()
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = topViewController.tableView.cellForRow(at: indexPath)
+        XCTAssertEqual(cell!.textLabel?.text, "tableView Header Title")
+    }
+    
+    func test_deleteButtonNotNil() {
+        XCTAssertNotNil(topViewController.deleteButton)
+    }
+    
+    func test_tapDeleteButton() {
         topViewController.deleteButton.sendActions(for: .touchUpInside)
         XCTAssertEqual(topViewController.tableView.isHidden, true)
     }
